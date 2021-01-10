@@ -8,6 +8,7 @@ function setup() {
   speed = random(223, 321);
   weight = random(30, 52);
   thickness = random(22, 83);
+  console.log(speed);
   bullet = createSprite(50, 200, 50, 10);
   bullet.shapeColor = "white";
   wall = createSprite(1200, 200, thickness, height / 2);
