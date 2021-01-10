@@ -8,7 +8,7 @@ function setup() {
   speed = random(223, 321);
   weight = random(30, 52);
   thickness = random(22, 83);
-  console.log(speed);
+  
   bullet = createSprite(50, 200, 50, 10);
   bullet.shapeColor = "white";
   wall = createSprite(1200, 200, thickness, height / 2);
@@ -35,10 +35,11 @@ function hasCollided(rbullet,rwall)
 function draw() {
   background(0);
   if(hasCollided(bullet, wall))
+    
 {
   bullet.velocityX=0;
   var damage=0.5*weight*speed*speed/(thickness*thickness*thickness)
-
+console.log(speed);
   if(damage>10){
     wall.shapeColor=color(255,0,0);
   }
